@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\Alfred.png" />
+    <None Include="wwwroot\images\Lolly.png" />
+    <None Include="wwwroot\images\Marwin.png" />
+    <None Include="wwwroot\images\Sigrid.png" />
+    <None Include="wwwroot\images\Zelda.png" />
+  </ItemGroup>
+
+</Project>

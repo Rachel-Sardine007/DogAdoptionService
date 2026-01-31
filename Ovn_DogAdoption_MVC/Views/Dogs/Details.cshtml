@@ -1,0 +1,20 @@
+﻿@model DogModel
+
+<h1>@Model.Name</h1>
+
+<img src="~/images/@($"{Model.Name}.png")" alt="@Model.Name" style="max-width:200px" />
+
+<ul>
+    <li>Cuteness: @Model.Cuteness</li>
+    <li>Temperament: @Model.Temperament</li>
+    <li>Favorite food: @Model.FavFood</li>
+    <li>Favorite toy: @Model.FavToy</li>
+</ul>
+
+<a asp-controller="Dogs" asp-action="Adopt" asp-route-id="@Model.Id" class="btn btn-warning">
+    Adoption intress
+</a>
+
+<a asp-controller="Dogs" asp-action="Index" class="btn btn-secondary">
+    Return
+</a>

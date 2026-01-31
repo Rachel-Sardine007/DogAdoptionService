@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Request received";
+}
+
+<h1>Thank you! 🙌</h1>
+
+<p>
+    We have received your adoption request for <strong>@ViewBag.DogName</strong>.
+</p>
+
+<p>
+    Our team will review your application and get back to you shortly.
+</p>
+
+<a asp-controller="Dogs" asp-action="Index" class="btn btn-secondary">
+    Back to all dogs
+</a>

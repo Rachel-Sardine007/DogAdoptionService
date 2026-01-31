@@ -1,0 +1,46 @@
+﻿@{
+
+    ViewData["Title"] = "List with dog information in cards"; /* page title */
+}
+
+@model List<DogModel> 
+@* <Ovning_DogAdoption_MVC.Models.DogModel> *@
+
+<h2> Welcome to </h2>
+<h1> Cutest Dog Adpotion </h1>
+
+<h4> We are looking for home! </h4>
+
+<div class="row g-4">
+    @foreach( var dog in Model)
+    {
+       <div class="col-md-3">
+        <div class="card dog-card">
+            <div class="card-header">
+                <h5 class="card-title">@dog.Name</h5>
+                <h6 class="card-subtitle"></h6>
+            </div>
+            <div class="card-body">
+                    <p>Cuteness: @dog.Cuteness   Temperament: @dog.Temperament</p>
+            </div>
+                @* dog.image *@
+                <img class="card-img-bottom" src="~/images/@dog.Image/">
+
+            <a asp-controller="Dogs" asp-action="Details" asp-route-id="@dog.Id" class="btn btn-warning">
+                Read more
+            </a>
+
+                @if (!dog.IsAdopted)
+                {
+                    <a asp-controller="Dogs" asp-action="Adopt" asp-route-id="@dog.Id" class="btn btn-primary">
+                        Express intress
+                    </a>
+                }
+                else
+                {
+                    <span class="badge text-bg-success">Already adopted</span>
+                }
+            </div>
+       </div>
+    }
+</div>
